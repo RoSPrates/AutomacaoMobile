@@ -17,10 +17,25 @@ public class MenuPage extends BasePage {
     private List<MobileElement> menu;
 
     public void escolheNoMenu(String option) {
+        String primeiraOpcaoNaTela = recuperaTexto(this.menu.get(0));
+        boolean chegouAoFim = false;
+        while(!verificaTextoNaTela(option) && !chegouAoFim){
+            scrollMenu();
+            chegouAoFim = primeiraOpcaoNaTela.equalsIgnoreCase(recuperaTexto(this.menu.get(0)));
+            primeiraOpcaoNaTela = recuperaTexto(this.menu.get(0));
+        }
         clicar(this.menu, option);
     }
 
     public boolean verificaTextoNaTela(String text) {
-        return verificaTextoPesente(this.menu, text);
+        try {
+            return verificaTextoPesente(this.menu, text);
+        } catch (IllegalArgumentException ex) {
+            return false;
+        }
+    }
+
+    public void scrollMenu() {
+        scroll(90, 10);
     }
 }

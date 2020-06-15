@@ -39,11 +39,11 @@ public class AlertTest extends BaseTest {
     }
 
     @Test
-    public void deveConfirmarAlertAlertaSimples(){
+    public void deveConfirmarAlertAlertaSimples() {
         alertPage.clicarBtnAlertaPorTexto("alerta simples");
         Assert.assertEquals("Info", alertPage.retornaTextoTitleAlert());
         Assert.assertEquals("Pode clicar no OK ou fora da caixa para sair", alertPage.retornaTextoMensagemAlert());
-        alertPage.tap(257,257);
+        alertPage.tap(257, 257);
 
         Assert.assertFalse(alertPage.textoDoElementoEVisivel("Pode clicar no OK ou fora da caixa para sair"));
     }

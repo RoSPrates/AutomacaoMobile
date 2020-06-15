@@ -31,6 +31,8 @@ public class FormularioTest extends BaseTest {
         String nome = new Faker().rickAndMorty().character();
         String[] console = {"PS4", "XBox One", "Nintendo Switch"};
         int num = new Random().nextInt(console.length);
+        int porcenatgem = new Random().nextInt(100) + 1;
+        System.out.println(porcenatgem);
 
         formularioPage.escreverNome(nome);
 
@@ -38,6 +40,7 @@ public class FormularioTest extends BaseTest {
 
         formularioPage.ativaDesativaCheck(true);
         formularioPage.ativaDesativaSwitch(false);
+        formularioPage.clicarSeekBarFormulario(porcenatgem);
 
         formularioPage.clicarSalvar();
 
@@ -48,8 +51,7 @@ public class FormularioTest extends BaseTest {
         Assert.assertEquals(nome, formularioPage.retornarNomeCadastrado());
         Assert.assertTrue(formularioPage.checkIsChecked());
         Assert.assertFalse(formularioPage.switchIsChecked());
-
-
+        Assert.assertEquals(String.valueOf(porcenatgem), formularioPage.recuperarPorcenatgemSeekBarCadastrado());
     }
 
     @Test
@@ -77,5 +79,17 @@ public class FormularioTest extends BaseTest {
         formularioPage.clicarBtnOk();
         Assert.assertEquals("22:30", formularioPage.recuperaTextoRelogio());
 
+    }
+
+    @Test
+    public void clicarSeekBaar() {
+        int porcenatgem = 30;
+//        porcenatgem = new Random().nextInt(100)+1;
+        System.out.println(porcenatgem);
+
+        formularioPage.clicarSeekBarFormulario(porcenatgem);
+        formularioPage.clicarSalvar();
+
+        Assert.assertEquals(String.valueOf(porcenatgem), formularioPage.recuperarPorcenatgemSeekBarCadastrado());
     }
 }

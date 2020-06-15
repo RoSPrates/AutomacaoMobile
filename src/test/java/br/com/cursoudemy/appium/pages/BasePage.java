@@ -7,6 +7,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -18,11 +19,13 @@ public class BasePage {
 
     AndroidDriver<MobileElement> driver;
     WebDriverWait wait;
+    TouchAction touchAction;
 
     public BasePage(AndroidDriver<MobileElement> driver) {
         PageFactory.initElements(new AppiumFieldDecorator(driver), this);
         this.driver = driver;
         wait = new WebDriverWait(driver, 40);
+        touchAction = new TouchAction(driver);
     }
 
     @AndroidFindBy(id = "android:id/message")
@@ -150,7 +153,7 @@ public class BasePage {
     }
 
     public void tap(int cordenadaX, int cordenadaY) {
-        new TouchAction<>(driver).press(new PointOption().withCoordinates(cordenadaX, cordenadaY)).perform();
+        touchAction.press(new PointOption().withCoordinates(cordenadaX, cordenadaY)).perform();
     }
 
     public boolean textoDoElementoEVisivel(String texto) {
@@ -159,5 +162,51 @@ public class BasePage {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public void clicarSeekBar(MobileElement seekBar, int posicao, int delta) {
+        int y = seekBar.getLocation().getY() + seekBar.getSize().getHeight() / 2;
+        int xInicial = seekBar.getLocation().getX() + delta;
+        int xFinal = (int) (xInicial + seekBar.getSize().getWidth() - 2 * delta);
+        System.out.println("x inicial: " + xInicial + "\nx final: " + xFinal);
+        System.out.println("y: " + y);
+        touchAction.press(new PointOption().withCoordinates(xInicial, y)).moveTo(new PointOption().withCoordinates((int) (xFinal * (posicao / 100.0)), y)).perform();
+    }
+
+    public void clicarLongo(MobileElement mobileElement) {
+        touchAction.longPress(new PointOption().
+                withCoordinates(mobileElement.getCenter())).perform();
+    }
+
+    public void clicarLongo(List<MobileElement> mobileElements, String text) {
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        clicarLongo(mobileElements.stream()
+                .filter(m -> m.getText().equalsIgnoreCase(text))
+                .findFirst().orElseThrow(IllegalArgumentException::new));
+    }
+
+    public void duploClique(MobileElement mobileElement) {
+        wait.until(ExpectedConditions.visibilityOf(mobileElement));
+        mobileElement.click();
+        mobileElement.click();
+    }
+
+    public void duploClique(List<MobileElement> mobileElements, String text) {
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        duploClique(mobileElements.stream()
+                .filter(m -> m.getText().equalsIgnoreCase(text))
+                .findFirst().orElseThrow(IllegalArgumentException::new));
+    }
+
+    public void scroll(int inicio, int fim) {
+        Dimension size = driver.manage().window().getSize();
+        int x = size.getWidth() / 2;
+        int startY = (int) (size.getHeight() * (inicio / 100.0));
+        int endY = (int) (size.getHeight() * (fim / 100.0));
+        touchAction.
+                longPress(new PointOption().withCoordinates(x, startY)).
+                moveTo(new PointOption().withCoordinates((x), endY)).
+                release().
+                perform();
     }
 }

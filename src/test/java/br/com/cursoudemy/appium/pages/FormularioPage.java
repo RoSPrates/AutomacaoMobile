@@ -40,11 +40,17 @@ public class FormularioPage extends BasePage {
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, 'Nome:')]")
     private MobileElement salvedName;
 
+    @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, 'Slider:')]")
+    private MobileElement seekBarSalvo;
+
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'/')]")
     private MobileElement openCalendar;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,':')]")
     private MobileElement openClock;
+
+    @AndroidFindBy(accessibility = "slid")
+    private MobileElement seekFormulario;
 
     public void escolherNoComboConsoles(String option) {
         clicar(abrirCombo);
@@ -83,6 +89,10 @@ public class FormularioPage extends BasePage {
         return recuperaTexto(consoleSalvo).substring(9).toLowerCase();
     }
 
+    public String recuperarPorcenatgemSeekBarCadastrado() {
+        return recuperaTexto(this.seekBarSalvo).substring(8);
+    }
+
     public void clicarSalvarDemorado() {
         clicar(this.btnSalvarDemorado);
     }
@@ -101,5 +111,9 @@ public class FormularioPage extends BasePage {
 
     public String recuperaTextoRelogio() {
         return recuperaTexto(openClock);
+    }
+
+    public void clicarSeekBarFormulario(int porcentagem) {
+        clicarSeekBar(this.seekFormulario, porcentagem, 30);
     }
 }
