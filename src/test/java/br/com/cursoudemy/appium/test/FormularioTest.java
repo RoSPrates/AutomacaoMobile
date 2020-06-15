@@ -83,7 +83,7 @@ public class FormularioTest extends BaseTest {
 
     @Test
     public void clicarSeekBaar() {
-        int porcenatgem = 30;
+        int porcenatgem = 1;
 //        porcenatgem = new Random().nextInt(100)+1;
         System.out.println(porcenatgem);
 

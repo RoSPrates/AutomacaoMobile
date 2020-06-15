@@ -36,6 +36,6 @@ public class MenuPage extends BasePage {
     }
 
     public void scrollMenu() {
-        scroll(90, 10);
+        scrollInScreem(50, 90,50,10);
     }
 }

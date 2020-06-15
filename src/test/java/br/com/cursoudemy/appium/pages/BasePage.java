@@ -6,6 +6,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
@@ -170,7 +172,7 @@ public class BasePage {
         int xFinal = (int) (xInicial + seekBar.getSize().getWidth() - 2 * delta);
         System.out.println("x inicial: " + xInicial + "\nx final: " + xFinal);
         System.out.println("y: " + y);
-        touchAction.press(new PointOption().withCoordinates(xInicial, y)).moveTo(new PointOption().withCoordinates((int) (xFinal * (posicao / 100.0)), y)).perform();
+        move(xInicial, y, (int) (xFinal * (posicao / 100.0)), y);
     }
 
     public void clicarLongo(MobileElement mobileElement) {
@@ -198,14 +200,20 @@ public class BasePage {
                 .findFirst().orElseThrow(IllegalArgumentException::new));
     }
 
-    public void scroll(int inicio, int fim) {
+    public void scrollInScreem(int xInicial, int yInicial, int xFinal, int yFinal) {
         Dimension size = driver.manage().window().getSize();
-        int x = size.getWidth() / 2;
-        int startY = (int) (size.getHeight() * (inicio / 100.0));
-        int endY = (int) (size.getHeight() * (fim / 100.0));
+        int startX = (int) (size.getWidth() * (xInicial / 100.0));
+        int endX = (int) (size.getWidth() * (xFinal / 100.0));
+        int startY = (int) (size.getHeight() * (yInicial / 100.0));
+        int endY = (int) (size.getHeight() * (yFinal / 100.0));
+        move(startX, startY, endX, endY);
+    }
+
+    public void move(int startX, int startY, int endX, int endY) {
         touchAction.
-                longPress(new PointOption().withCoordinates(x, startY)).
-                moveTo(new PointOption().withCoordinates((x), endY)).
+                press(new PointOption().withCoordinates(startX, startY)).
+                waitAction(WaitOptions.waitOptions(Duration.ofMillis(500))).
+                moveTo(new PointOption().withCoordinates(endX, endY)).
                 release().
                 perform();
     }
