@@ -3,6 +3,7 @@ package br.com.cursoudemy.appium.test;
 import br.com.cursoudemy.appium.core.DriverFactory;
 import br.com.cursoudemy.appium.pages.MenuPage;
 import br.com.cursoudemy.appium.pages.SwipePage;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,5 +25,6 @@ public class SwipeTest extends BaseTest {
     @Test
     public void chegaaoFimEVolta() {
         this.swipePage.swipeDireita();
+        Assert.assertTrue(this.swipePage.isPresent("você"));
     }
 }

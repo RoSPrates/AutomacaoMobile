@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BasePage {
 
@@ -73,6 +74,15 @@ public class BasePage {
         return mobileElement.getText();
     }
 
+    public List<String> recuperaTexto(List<MobileElement> mobileElements){
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        return mobileElements.stream().
+                filter(m -> !m.getText().isEmpty()).
+                collect(Collectors.toList()).
+                stream().map(m -> recuperaTexto(m)).
+                collect(Collectors.toList());
+    }
+
     public void clicar(List<MobileElement> mobileElements, String text) {
         wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
         clicar(mobileElements.stream()
@@ -91,10 +101,8 @@ public class BasePage {
     }
 
     public boolean verificaTextoPesente(List<MobileElement> mobileElements, String text) {
-        mobileElements.stream()
-                .filter(m -> m.getText().equalsIgnoreCase(text))
-                .findFirst().orElseThrow(IllegalArgumentException::new);
-        return true;
+       return mobileElements.stream()
+                .anyMatch(m -> m.getText().equalsIgnoreCase(text));
     }
 
     public void aguardaSairDaTela(MobileElement mobileElement) {
