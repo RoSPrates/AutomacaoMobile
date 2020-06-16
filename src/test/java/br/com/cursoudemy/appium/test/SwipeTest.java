@@ -23,7 +23,7 @@ public class SwipeTest extends BaseTest {
     }
 
     @Test
-    public void chegaaoFimEVolta() {
+    public void chegaAoFimEVolta() {
         this.swipePage.swipeDireita();
         Assert.assertTrue(this.swipePage.isPresent("você"));
         this.swipePage.clicarDiretita();
