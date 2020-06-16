@@ -26,5 +26,10 @@ public class SwipeTest extends BaseTest {
     public void chegaaoFimEVolta() {
         this.swipePage.swipeDireita();
         Assert.assertTrue(this.swipePage.isPresent("você"));
+        this.swipePage.clicarDiretita();
+        Assert.assertTrue(this.swipePage.isPresent("fim"));
+        this.swipePage.swipeEsquerda();
+        this.swipePage.clicarEsquerda();
+        Assert.assertTrue(this.swipePage.isPresent("mova"));
     }
 }
