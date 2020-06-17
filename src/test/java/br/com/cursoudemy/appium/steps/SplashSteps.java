@@ -1,39 +1,33 @@
-package br.com.cursoudemy.appium.test;
+package br.com.cursoudemy.appium.steps;
 
 import br.com.cursoudemy.appium.pages.MenuPage;
 import br.com.cursoudemy.appium.pages.SplashPage;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
-public class SplashTest extends BaseTest {
+public class SplashSteps {
 
-
-    MenuPage menuPage;
     SplashPage splashPage;
+    MenuPage menuPage;
 
-
-    public SplashTest() {
-        menuPage = new MenuPage();
+    public SplashSteps() {
         splashPage = new SplashPage();
+        menuPage = new MenuPage();
     }
 
-    @Before
-    public void splashTest() {
-        menuPage.escolheNoMenu("Splash");
-    }
-
-
-    @Test
-    public void aguardarSplashSumir() {
+    @Quando("^Visualizar a tela de splash$")
+    public void visualizarATelaDeSplash() {
         splashPage.verificaTextoNaTela("esta");
         splashPage.verificaTextoNaTela("é");
         splashPage.verificaTextoNaTela("uma");
         splashPage.verificaTextoNaTela("tela");
         splashPage.verificaTextoNaTela("splash!");
+    }
 
+    @Entao("volto para o menu")
+    public void voltoParaOMenu() {
         splashPage.aguardaSairDaTela("é");
         Assert.assertTrue(menuPage.verificaTextoNaTela("about..."));
-
     }
 }

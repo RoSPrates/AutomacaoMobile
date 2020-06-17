@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         "json:target/cucumber.json"},
         features = {"src/test/resources/features"},
         glue = {"br/com/cursoudemy/appium/steps", "br/com/cursoudemy/appium/core"},
-        tags = {"@accordion"})
+        tags = {"@splash"})
 public class RunTest {
 
 }
