@@ -8,10 +8,6 @@ import java.util.List;
 
 public class SplashPage extends BasePage {
 
-    public SplashPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
-
     @AndroidFindBy(xpath = "//android.widget.TextView")
     List<MobileElement> textSplashPage;
 

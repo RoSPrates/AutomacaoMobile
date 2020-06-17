@@ -8,9 +8,6 @@ import java.util.List;
 
 public class AbasPage extends BasePage {
 
-    public AbasPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'ABA')]")
     private List<MobileElement> btnAbas;

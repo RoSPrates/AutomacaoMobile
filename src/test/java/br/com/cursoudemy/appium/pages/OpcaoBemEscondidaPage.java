@@ -9,10 +9,6 @@ public class OpcaoBemEscondidaPage extends BasePage {
     private String mensagemAlert = "Você achou essa opção";
 
 
-    public OpcaoBemEscondidaPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
-
     public String getTituloAlert() {
         return this.tituloAlert;
     }

@@ -3,7 +3,6 @@ package br.com.cursoudemy.appium.pages;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
@@ -18,17 +17,17 @@ import java.time.Duration;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static br.com.cursoudemy.appium.core.DriverFactory.getDriver;
+
 public class BasePage {
 
-    AndroidDriver<MobileElement> driver;
     WebDriverWait wait;
     TouchAction touchAction;
 
-    public BasePage(AndroidDriver<MobileElement> driver) {
-        PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-        this.driver = driver;
-        wait = new WebDriverWait(driver, 40);
-        touchAction = new TouchAction(driver);
+    public BasePage() {
+        PageFactory.initElements(new AppiumFieldDecorator(getDriver()), this);
+        wait = new WebDriverWait(getDriver(), 40);
+        touchAction = new TouchAction(getDriver());
     }
 
     @AndroidFindBy(id = "android:id/message")
@@ -74,7 +73,7 @@ public class BasePage {
         return mobileElement.getText();
     }
 
-    public List<String> recuperaTexto(List<MobileElement> mobileElements){
+    public List<String> recuperaTexto(List<MobileElement> mobileElements) {
         wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
         return mobileElements.stream().
                 filter(m -> !m.getText().isEmpty()).
@@ -101,7 +100,7 @@ public class BasePage {
     }
 
     public boolean verificaTextoPesente(List<MobileElement> mobileElements, String text) {
-       return mobileElements.stream()
+        return mobileElements.stream()
                 .anyMatch(m -> m.getText().equalsIgnoreCase(text));
     }
 
@@ -168,7 +167,7 @@ public class BasePage {
 
     public boolean textoDoElementoEVisivel(String texto) {
         try {
-            return driver.findElement(MobileBy.xpath("//*[@text = '" + texto + "']")).isDisplayed();
+            return getDriver().findElement(MobileBy.xpath("//*[@text = '" + texto + "']")).isDisplayed();
         } catch (NoSuchElementException e) {
             return false;
         }
@@ -178,8 +177,6 @@ public class BasePage {
         int y = seekBar.getLocation().getY() + seekBar.getSize().getHeight() / 2;
         int xInicial = seekBar.getLocation().getX() + delta;
         int xFinal = (int) (xInicial + seekBar.getSize().getWidth() - 2 * delta);
-        System.out.println("x inicial: " + xInicial + "\nx final: " + xFinal);
-        System.out.println("y: " + y);
         move(xInicial, y, (int) (xFinal * (posicao / 100.0)), y);
     }
 
@@ -209,7 +206,7 @@ public class BasePage {
     }
 
     public void scrollInScreem(int xInicial, int yInicial, int xFinal, int yFinal) {
-        Dimension size = driver.manage().window().getSize();
+        Dimension size = getDriver().manage().window().getSize();
         int startX = (int) (size.getWidth() * (xInicial / 100.0));
         int endX = (int) (size.getWidth() * (xFinal / 100.0));
         int startY = (int) (size.getHeight() * (yInicial / 100.0));

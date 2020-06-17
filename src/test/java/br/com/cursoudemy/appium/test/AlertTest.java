@@ -1,6 +1,5 @@
 package br.com.cursoudemy.appium.test;
 
-import br.com.cursoudemy.appium.core.DriverFactory;
 import br.com.cursoudemy.appium.pages.AlertPage;
 import br.com.cursoudemy.appium.pages.MenuPage;
 import org.junit.Assert;
@@ -13,8 +12,8 @@ public class AlertTest extends BaseTest {
     private AlertPage alertPage;
 
     public AlertTest() {
-        menuPage = new MenuPage(DriverFactory.getDriver());
-        alertPage = new AlertPage(DriverFactory.getDriver());
+        menuPage = new MenuPage();
+        alertPage = new AlertPage();
     }
 
     @Before

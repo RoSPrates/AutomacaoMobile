@@ -1,6 +1,5 @@
 package br.com.cursoudemy.appium.test;
 
-import br.com.cursoudemy.appium.core.DriverFactory;
 import br.com.cursoudemy.appium.pages.MenuPage;
 import br.com.cursoudemy.appium.pages.SplashPage;
 import org.junit.Assert;
@@ -15,12 +14,12 @@ public class SplashTest extends BaseTest {
 
 
     public SplashTest() {
-        menuPage = new MenuPage(DriverFactory.getDriver());
-        splashPage = new SplashPage(DriverFactory.getDriver());
+        menuPage = new MenuPage();
+        splashPage = new SplashPage();
     }
 
     @Before
-    public void splashTest(){
+    public void splashTest() {
         menuPage.escolheNoMenu("Splash");
     }
 

@@ -1,6 +1,5 @@
 package br.com.cursoudemy.appium.test;
 
-import br.com.cursoudemy.appium.core.DriverFactory;
 import br.com.cursoudemy.appium.pages.CliquePage;
 import br.com.cursoudemy.appium.pages.MenuPage;
 import org.junit.Assert;
@@ -12,9 +11,9 @@ public class CliquesTest extends BaseTest {
     MenuPage menuPage;
     CliquePage cliquePage;
 
-    public CliquesTest(){
-        menuPage = new MenuPage(DriverFactory.getDriver());
-        cliquePage = new CliquePage(DriverFactory.getDriver());
+    public CliquesTest() {
+        menuPage = new MenuPage();
+        cliquePage = new CliquePage();
 
     }
 
@@ -24,23 +23,23 @@ public class CliquesTest extends BaseTest {
     }
 
     @Test
-    public void testCliqueLongo(){
+    public void testCliqueLongo() {
         this.cliquePage.clicarCliqueLongo();
 
-        Assert.assertEquals("Clique Longo",this.cliquePage.recuperaTextoDoCliqueSelecionado());
+        Assert.assertEquals("Clique Longo", this.cliquePage.recuperaTextoDoCliqueSelecionado());
     }
 
     @Test
-    public void testCliqueDuplo(){
+    public void testCliqueDuplo() {
         this.cliquePage.clicarCliqueDuplo();
 
-        Assert.assertEquals("Duplo Clique",this.cliquePage.recuperaTextoDoCliqueSelecionado());
+        Assert.assertEquals("Duplo Clique", this.cliquePage.recuperaTextoDoCliqueSelecionado());
     }
 
     @Test
-    public void testCliqueDuploLento(){
+    public void testCliqueDuploLento() {
         this.cliquePage.clicarCliqueDuploLento();
 
-        Assert.assertEquals("Duplo Clique lento",this.cliquePage.recuperaTextoDoCliqueSelecionado());
+        Assert.assertEquals("Duplo Clique lento", this.cliquePage.recuperaTextoDoCliqueSelecionado());
     }
 }

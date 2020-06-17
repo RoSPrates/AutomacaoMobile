@@ -7,9 +7,6 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import java.util.List;
 
 public class AlertPage extends BasePage {
-    public AlertPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, 'ALERTA')]")
     private List<MobileElement> btnAlert;

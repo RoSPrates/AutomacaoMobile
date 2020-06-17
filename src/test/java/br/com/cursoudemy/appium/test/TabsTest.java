@@ -1,6 +1,5 @@
 package br.com.cursoudemy.appium.test;
 
-import br.com.cursoudemy.appium.core.DriverFactory;
 import br.com.cursoudemy.appium.pages.AbasPage;
 import br.com.cursoudemy.appium.pages.MenuPage;
 import org.junit.Assert;
@@ -13,8 +12,8 @@ public class TabsTest extends BaseTest {
     AbasPage abasPage;
 
     public TabsTest() {
-        menuPage = new MenuPage(DriverFactory.getDriver());
-        abasPage = new AbasPage(DriverFactory.getDriver());
+        menuPage = new MenuPage();
+        abasPage = new AbasPage();
     }
 
     @Before

@@ -8,9 +8,6 @@ import java.util.List;
 
 public class CliquePage extends BasePage {
 
-    public CliquePage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text,'Clique')]")
     private List<MobileElement> brnClique;

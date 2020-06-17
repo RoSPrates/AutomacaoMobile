@@ -1,0 +1,427 @@
+[
+  {
+    "line": 5,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-17T00:38:13.391Z",
+        "line": 14,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 18158000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 60006000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 967000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 1\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1379000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 1\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T00:39:34.210Z",
+        "line": 15,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 6881000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4763000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3450000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 2\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1976000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 2\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T00:39:51.313Z",
+        "line": 16,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 12836000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6308000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4625000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 3\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2031000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 3\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T00:40:17.141Z",
+        "line": 17,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 11185000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5111000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3713000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 4\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 2003000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 4\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T00:40:39.181Z",
+        "line": 18,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 8965000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2635000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 3323000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 5\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1446000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 5\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      }
+    ],
+    "name": "Accordion",
+    "description": "",
+    "id": "accordion",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/Accordion.feature",
+    "tags": [
+      {
+        "name": "@accordion",
+        "type": "Tag",
+        "location": {
+          "line": 4,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

@@ -9,10 +9,6 @@ import java.util.List;
 public class MenuPage extends BasePage {
 
 
-    public MenuPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
-
     @AndroidFindBy(className = "android.widget.TextView")
     private List<MobileElement> menu;
 

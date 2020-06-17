@@ -8,10 +8,6 @@ import java.util.List;
 
 public class SwipePage extends BasePage {
 
-    public SwipePage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
-
     @AndroidFindBy(xpath = "//android.widget.TextView")
     private List<MobileElement> lblTela;
 

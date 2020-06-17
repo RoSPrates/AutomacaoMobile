@@ -8,11 +8,6 @@ import java.util.List;
 
 public class FormularioPage extends BasePage {
 
-
-    public FormularioPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
-    }
-
     @AndroidFindBy(accessibility = "console")
     private MobileElement abrirCombo;
 

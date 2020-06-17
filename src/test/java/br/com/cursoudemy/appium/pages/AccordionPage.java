@@ -8,8 +8,7 @@ import java.util.List;
 
 public class AccordionPage extends BasePage {
 
-    public AccordionPage(AndroidDriver<MobileElement> driver) {
-        super(driver);
+    public AccordionPage() {
     }
 
     @AndroidFindBy(xpath = "//android.widget.TextView[contains(@text, 'Opção')]")
