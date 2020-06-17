@@ -8,6 +8,7 @@ Funcionalidade: Formulario
     Dado escolher no menu a opção "Formulário"
 
 
+    @preencheFormularioCompleto
   Cenario: Salvar formulario completo
     Quando preencher o formulario
     Entao visualizar as informações do formulario

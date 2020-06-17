@@ -3,7 +3,432 @@
     "line": 5,
     "elements": [
       {
-        "start_timestamp": "2020-06-17T01:00:41.028Z",
+        "start_timestamp": "2020-06-17T12:13:45.455Z",
+        "line": 14,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1758000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 12103000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 877000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 1\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1235000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 1\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:01.516Z",
+        "line": 15,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 1714000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1503000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 813000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 2\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1122000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 2\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:06.675Z",
+        "line": 16,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 1760000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1394000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 984000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 3\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1126000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 3\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:11.944Z",
+        "line": 17,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 1968000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1900000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1053000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 4\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1136000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 4\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 4\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:18.008Z",
+        "line": 18,
+        "name": "Testar os accordins",
+        "description": "",
+        "id": "accordion;testar-os-accordins;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 1805000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1871000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"accordion\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "accordion",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 1016000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicar no accordion com o nome \"Opção 5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 5\"",
+                  "offset": 31
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.clicarNoAccordionComNome(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1156000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "visualizar as informações do accordion \"Opção 5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Opção 5\"",
+                  "offset": 39
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.AccordionSteps.visualizarAsInformaçõesDoAccordion(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@accordion"
+          }
+        ]
+      }
+    ],
+    "name": "Accordion",
+    "description": "",
+    "id": "accordion",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/Accordion.feature",
+    "tags": [
+      {
+        "name": "@accordion",
+        "type": "Tag",
+        "location": {
+          "line": 4,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 5,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-17T12:14:23.866Z",
         "line": 7,
         "name": "entrar e sair da tela de splash",
         "description": "",
@@ -11,7 +436,7 @@
         "after": [
           {
             "result": {
-              "duration": 7259000000,
+              "duration": 1674000000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +449,7 @@
         "steps": [
           {
             "result": {
-              "duration": 25883000000,
+              "duration": 1786000000,
               "status": "passed"
             },
             "line": 8,
@@ -42,7 +467,7 @@
           },
           {
             "result": {
-              "duration": 2604000000,
+              "duration": 3354000000,
               "status": "passed"
             },
             "line": 9,
@@ -54,7 +479,7 @@
           },
           {
             "result": {
-              "duration": 3239000000,
+              "duration": 2456000000,
               "status": "passed"
             },
             "line": 10,
@@ -80,6 +505,749 @@
     "tags": [
       {
         "name": "@splash",
+        "type": "Tag",
+        "location": {
+          "line": 4,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 5,
+    "elements": [
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1285000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:33.148Z",
+        "line": 12,
+        "name": "Salvar formulario completo",
+        "description": "",
+        "id": "formulario;salvar-formulario-completo",
+        "after": [
+          {
+            "result": {
+              "duration": 2285000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6983000000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "preencher o formulario",
+            "match": {
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.preencherOFormulario()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 1831000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "visualizar as informações do formulario",
+            "match": {
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarAsInformacoesDoFormulario()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          },
+          {
+            "name": "@preencheFormularioCompleto"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1161000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:45.543Z",
+        "line": 16,
+        "name": "Salvar formulario apenas com nome",
+        "description": "",
+        "id": "formulario;salvar-formulario-apenas-com-nome",
+        "after": [
+          {
+            "result": {
+              "duration": 2005000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1645000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "preencher o nome",
+            "match": {
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.preencherONome()"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 3915000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "visualizar o nome salvo",
+            "match": {
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarONomeSalvo()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1362000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:14:54.273Z",
+        "line": 26,
+        "name": "Escolher data no calendario",
+        "description": "",
+        "id": "formulario;escolher-data-no-calendario;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3243000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4360000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "escolher o dia \"20\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20\"",
+                  "offset": 15
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherODia(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 624000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "visualizar o dia \"20\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"20\"",
+                  "offset": 17
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarODia(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1417000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:15:03.870Z",
+        "line": 27,
+        "name": "Escolher data no calendario",
+        "description": "",
+        "id": "formulario;escolher-data-no-calendario;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2857000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4789000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "escolher o dia \"15\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"15\"",
+                  "offset": 15
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherODia(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 749000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "visualizar o dia \"15\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"15\"",
+                  "offset": 17
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarODia(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1222000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:15:13.687Z",
+        "line": 28,
+        "name": "Escolher data no calendario",
+        "description": "",
+        "id": "formulario;escolher-data-no-calendario;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 2688000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4170000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "escolher o dia \"25\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25\"",
+                  "offset": 15
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherODia(java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 803000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "visualizar o dia \"25\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25\"",
+                  "offset": 17
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarODia(java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1146000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:15:22.573Z",
+        "line": 36,
+        "name": "Preencher a hora pelo helper",
+        "description": "",
+        "id": "formulario;preencher-a-hora-pelo-helper;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 3298000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4612000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "escolher \"22\" e \"30\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"22\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"30\"",
+                  "offset": 16
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 767000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Visualizar \"22\" e \"30\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"22\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"30\"",
+                  "offset": 18
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 1210000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:15:32.403Z",
+        "line": 37,
+        "name": "Preencher a hora pelo helper",
+        "description": "",
+        "id": "formulario;preencher-a-hora-pelo-helper;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3996000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3898000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "escolher \"14\" e \"20\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"14\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"20\"",
+                  "offset": 16
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 870000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Visualizar \"14\" e \"20\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"14\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"20\"",
+                  "offset": 18
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      },
+      {
+        "line": 7,
+        "name": "Acessar o Formulário",
+        "description": "",
+        "type": "background",
+        "keyword": "Contexto",
+        "steps": [
+          {
+            "result": {
+              "duration": 870000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Formulário\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Formulário",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-17T12:15:42.382Z",
+        "line": 38,
+        "name": "Preencher a hora pelo helper",
+        "description": "",
+        "id": "formulario;preencher-a-hora-pelo-helper;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 2961000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4966000000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "escolher \"12\" e \"50\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"50\"",
+                  "offset": 16
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Quando "
+          },
+          {
+            "result": {
+              "duration": 689000000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Visualizar \"12\" e \"50\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"50\"",
+                  "offset": 18
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.visualizarE(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@formulario"
+          }
+        ]
+      }
+    ],
+    "name": "Formulario",
+    "description": "",
+    "id": "formulario",
+    "keyword": "Funcionalidade",
+    "uri": "file:src/test/resources/features/formulario.feature",
+    "tags": [
+      {
+        "name": "@formulario",
         "type": "Tag",
         "location": {
           "line": 4,

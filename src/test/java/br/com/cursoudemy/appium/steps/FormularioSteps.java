@@ -49,7 +49,10 @@ public class FormularioSteps {
         console[1] = "xone";
         console[2] = "Switch";
         Assert.assertEquals(console[num].toLowerCase(), formularioPage.retornaConsoleCadastrado().toLowerCase());
-        Assert.assertEquals(nome, formularioPage.retornarNomeCadastrado());
+        if (nome.length() < 20)
+            Assert.assertEquals(nome, formularioPage.retornarNomeCadastrado());
+        else
+            Assert.assertEquals(nome.substring(0, 20), formularioPage.retornarNomeCadastrado());
         Assert.assertTrue(formularioPage.checkIsChecked());
         Assert.assertFalse(formularioPage.switchIsChecked());
         Assert.assertEquals(String.valueOf(porcenatgem), formularioPage.recuperarPorcenatgemSeekBarCadastrado());
@@ -63,7 +66,10 @@ public class FormularioSteps {
 
     @Entao("visualizar o nome salvo")
     public void visualizarONomeSalvo() {
-        Assert.assertEquals(nome, formularioPage.retornarNomeCadastrado());
+        if (nome.length() < 20)
+            Assert.assertEquals(nome, formularioPage.retornarNomeCadastrado());
+        else
+            Assert.assertEquals(nome.substring(0, 20), formularioPage.retornarNomeCadastrado());
     }
 
     @Quando("escolher o dia {string}")
