@@ -1,49 +1,50 @@
-package br.com.cursoudemy.appium.test;
+package br.com.cursoudemy.appium.steps;
 
 import br.com.cursoudemy.appium.pages.AlertPage;
-import br.com.cursoudemy.appium.pages.MenuPage;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Entao;
+import io.cucumber.java.pt.Quando;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
 
-public class AlertTest extends BaseTest {
-
-    private MenuPage menuPage;
-    private AlertPage alertPage;
-
-    public AlertTest() {
-        menuPage = new MenuPage();
+public class AlertSteps {
+    AlertPage alertPage;
+    public AlertSteps(){
         alertPage = new AlertPage();
     }
 
-    @Before
-    public void alertTest() {
-        menuPage.escolheNoMenu("alertas");
+    @E("clicar no alerta {string}")
+    public void clicarNoAlerta(String alert) {
+        alertPage.clicarBtnAlertaPorTexto(alert);
     }
 
-
-    @Test
-    public void deveConfirmarAlertConfirm() {
-        alertPage.clicarBtnAlertaPorTexto("alerta confirm");
-
+    @Quando("Confirmar o alerta")
+    public void confirmarOAlerta() {
         Assert.assertEquals("Info", alertPage.retornaTextoTitleAlert());
         Assert.assertEquals("Confirma a operação?", alertPage.retornaTextoMensagemAlert());
         alertPage.clicarBtnConfirmar();
+    }
 
+    @E("clicar no botão sair do alerta")
+    public void clicarNoBotaoSairDoAlerta() {
         Assert.assertEquals("Info", alertPage.retornaTextoTitleAlert());
         Assert.assertEquals("Confirmado", alertPage.retornaTextoMensagemAlert());
         alertPage.clicarBtnSair();
+    }
 
+    @Entao("confirmar que saiu do alerta")
+    public void confirmarQueSaiuDoAlerta() {
         Assert.assertTrue(alertPage.verificaTextoNaTela("ALERTA CONFIRM"));
     }
 
-    @Test
-    public void deveConfirmarAlertAlertaSimples() {
-        alertPage.clicarBtnAlertaPorTexto("alerta simples");
+    @Quando("Confirmar o alerta simples")
+    public void confirmarOAlertaSimples() {
         Assert.assertEquals("Info", alertPage.retornaTextoTitleAlert());
         Assert.assertEquals("Pode clicar no OK ou fora da caixa para sair", alertPage.retornaTextoMensagemAlert());
         alertPage.tap(257, 257);
+    }
 
+    @Entao("confirmar que saiu do alerta simples")
+    public void confirmarQueSaiuDoAlertaSimples() {
         Assert.assertFalse(alertPage.textoDoElementoEVisivel("Pode clicar no OK ou fora da caixa para sair"));
     }
 }
