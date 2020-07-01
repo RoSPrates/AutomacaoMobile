@@ -28,6 +28,11 @@ public class SplashSteps {
     @Entao("volto para o menu")
     public void voltoParaOMenu() {
         splashPage.aguardaSairDaTela("é");
-        Assert.assertTrue(menuPage.verificaTextoNaTela("about..."));
+        voltoParaOMenuEVejo("about...");
+    }
+
+    @Entao("volto para o menu e vejo {string}")
+    public void voltoParaOMenuEVejo(String opcao) {
+        Assert.assertTrue(menuPage.verificaTextoNaTela(opcao));
     }
 }

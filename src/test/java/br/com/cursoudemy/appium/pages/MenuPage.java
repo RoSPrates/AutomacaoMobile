@@ -12,6 +12,7 @@ public class MenuPage extends BasePage {
     private List<MobileElement> menu;
 
     public void escolheNoMenu(String option) {
+        sleep(1750);
         String primeiraOpcaoNaTela = recuperaTexto(this.menu.get(0));
         boolean chegouAoFim = false;
         while (!verificaTextoNaTela(option) && !chegouAoFim) {
@@ -23,10 +24,12 @@ public class MenuPage extends BasePage {
     }
 
     public boolean verificaTextoNaTela(String text) {
+        sleep(500);
         return verificaTextoPesente(this.menu, text);
     }
 
     public void scrollMenu() {
         scrollInScreem(50, 90, 50, 10);
     }
+
 }

@@ -7,6 +7,7 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
@@ -78,11 +79,12 @@ public class BasePage {
         return mobileElements.stream().
                 filter(m -> !m.getText().isEmpty()).
                 collect(Collectors.toList()).
-                stream().map(m -> recuperaTexto(m)).
+                stream().map(this::recuperaTexto).
                 collect(Collectors.toList());
     }
 
     public void clicar(List<MobileElement> mobileElements, String text) {
+        sleep(500);
         wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
         clicar(mobileElements.stream()
                 .filter(m -> m.getText().equalsIgnoreCase(text))
@@ -119,6 +121,8 @@ public class BasePage {
     }
 
     public String retornaTextoTitleAlert() {
+        sleep(500);
+        wait.until(ExpectedConditions.visibilityOf(this.lblAlertTitle));
         return recuperaTexto(this.lblAlertTitle);
     }
 
@@ -152,10 +156,12 @@ public class BasePage {
     }
 
     public void escolheDia(String dia) {
+        sleep(500);
         clicar(btnDia, dia);
     }
 
     public void clicarNoTimeHelper(String option) {
+        sleep(500);
         clicar(btnTimeHelper.stream()
                 .filter(m -> m.getAttribute("content-desc").equalsIgnoreCase(option))
                 .findFirst().orElseThrow(IllegalArgumentException::new));
@@ -221,5 +227,13 @@ public class BasePage {
                 moveTo(new PointOption().withCoordinates(endX, endY)).
                 release().
                 perform();
+    }
+
+    protected void sleep(int time){
+        try {
+            Thread.sleep(time);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

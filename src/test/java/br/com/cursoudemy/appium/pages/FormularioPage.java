@@ -49,6 +49,7 @@ public class FormularioPage extends BasePage {
 
     public void escolherNoComboConsoles(String option) {
         clicar(abrirCombo);
+        sleep(500);
         clicar(this.consoles, option);
     }
 

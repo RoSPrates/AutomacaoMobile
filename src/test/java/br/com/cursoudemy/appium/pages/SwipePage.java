@@ -37,13 +37,14 @@ public class SwipePage extends BasePage {
     }
 
     public List<String> recuperaTextoNaTela() {
+        sleep(500);
         return recuperaTexto(this.lblTela);
     }
 
     private void espera(String text) {
         int cont = 0;
         boolean ver = !isPresent(text);
-        while (ver && cont < 50) {
+        while (!isPresent(text) && cont < 50) {
             try {
                 Thread.sleep(50);
             } catch (InterruptedException e) {
