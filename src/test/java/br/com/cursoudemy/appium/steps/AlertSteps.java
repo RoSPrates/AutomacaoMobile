@@ -40,7 +40,7 @@ public class AlertSteps {
     public void confirmarOAlertaSimples() {
         Assert.assertEquals("Info", alertPage.retornaTextoTitleAlert());
         Assert.assertEquals("Pode clicar no OK ou fora da caixa para sair", alertPage.retornaTextoMensagemAlert());
-        alertPage.tap(257, 257);
+        alertPage.tapOutTheBox(257, 257);
     }
 
     @Entao("confirmar que saiu do alerta simples")

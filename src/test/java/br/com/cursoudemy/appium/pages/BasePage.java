@@ -7,7 +7,6 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.support.PageFactory;
@@ -167,8 +166,19 @@ public class BasePage {
                 .findFirst().orElseThrow(IllegalArgumentException::new));
     }
 
-    public void tap(int cordenadaX, int cordenadaY) {
+    public void tapOutTheBox(int cordenadaX, int cordenadaY) {
         touchAction.press(new PointOption().withCoordinates(cordenadaX, cordenadaY)).perform();
+    }
+
+    public void tap(int cordenadaX, int cordenadaY) {
+        touchAction.press(new PointOption().withCoordinates(cordenadaX, cordenadaY)).
+                release().perform();
+    }
+
+    public void tap(MobileElement mobileElement) {
+        int x = mobileElement.getLocation().getX();
+        int y = mobileElement.getLocation().getY();
+        tap(x, y);
     }
 
     public boolean textoDoElementoEVisivel(String texto) {
@@ -220,6 +230,46 @@ public class BasePage {
         move(startX, startY, endX, endY);
     }
 
+    public void horizontalSwipeInElement(MobileElement mobileElement, int start, int end) {
+        Dimension size = getDriver().manage().window().getSize();
+        int y = mobileElement.getLocation().getY() + (mobileElement.getSize().getHeight()/2);
+        int startX = (int) (size.getWidth() * (start / 100.0));
+        int endX = (int) (size.getWidth() * (end / 100.0));
+        move(startX, y, endX, y);
+    }
+
+    public void verticalSwipeInElement(MobileElement mobileElement, int start, int end) {
+        Dimension size = getDriver().manage().window().getSize();
+        int x = mobileElement.getLocation().getX() + (mobileElement.getSize().getHeight()/2);
+        int startY = (int) (size.getHeight() * (start / 100.0));
+        int endY = (int) (size.getHeight() * (end / 100.0));
+        move(x, startY, x, endY);
+    }
+
+    public void horizontalSwipeInElementEqualsText(List<MobileElement> mobileElements, String text, int start, int end) {
+        sleep(500);
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        horizontalSwipeInElement(mobileElements.stream()
+                .filter(m -> m.getText().equalsIgnoreCase(text))
+                .findFirst().orElseThrow(IllegalArgumentException::new), start, end);
+    }
+
+    public void horizontalSwipeInElementContainsText(List<MobileElement> mobileElements, String text, int start, int end) {
+        sleep(500);
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        horizontalSwipeInElement(mobileElements.stream()
+                .filter(m -> m.getText().contains(text))
+                .findFirst().orElseThrow(IllegalArgumentException::new), start, end);
+    }
+
+    public void verticalSwipeInElement(List<MobileElement> mobileElements, String text, int start, int end) {
+        sleep(500);
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        verticalSwipeInElement(mobileElements.stream()
+                .filter(m -> m.getText().equalsIgnoreCase(text))
+                .findFirst().orElseThrow(IllegalArgumentException::new), start, end);
+    }
+
     public void move(int startX, int startY, int endX, int endY) {
         touchAction.
                 press(new PointOption().withCoordinates(startX, startY)).
@@ -229,7 +279,7 @@ public class BasePage {
                 perform();
     }
 
-    protected void sleep(int time){
+    protected void sleep(int time) {
         try {
             Thread.sleep(time);
         } catch (InterruptedException e) {
