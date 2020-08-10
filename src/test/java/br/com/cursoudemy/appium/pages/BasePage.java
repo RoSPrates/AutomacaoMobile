@@ -232,7 +232,7 @@ public class BasePage {
 
     public void horizontalSwipeInElement(MobileElement mobileElement, int start, int end) {
         Dimension size = getDriver().manage().window().getSize();
-        int y = mobileElement.getLocation().getY() + (mobileElement.getSize().getHeight()/2);
+        int y = mobileElement.getLocation().getY() + (mobileElement.getSize().getHeight() / 2);
         int startX = (int) (size.getWidth() * (start / 100.0));
         int endX = (int) (size.getWidth() * (end / 100.0));
         move(startX, y, endX, y);
@@ -240,7 +240,7 @@ public class BasePage {
 
     public void verticalSwipeInElement(MobileElement mobileElement, int start, int end) {
         Dimension size = getDriver().manage().window().getSize();
-        int x = mobileElement.getLocation().getX() + (mobileElement.getSize().getHeight()/2);
+        int x = mobileElement.getLocation().getX() + (mobileElement.getSize().getWidth() / 2);
         int startY = (int) (size.getHeight() * (start / 100.0));
         int endY = (int) (size.getHeight() * (end / 100.0));
         move(x, startY, x, endY);
@@ -277,6 +277,29 @@ public class BasePage {
                 moveTo(new PointOption().withCoordinates(endX, endY)).
                 release().
                 perform();
+    }
+
+    public void mover(int startX, int startY, int endX, int endY) {
+        touchAction.
+                longPress(new PointOption().withCoordinates(startX, startY)).
+                moveTo(new PointOption().withCoordinates(endX, endY)).
+                release().
+                perform();
+    }
+
+    public void mover(MobileElement de, MobileElement para) {
+        mover(de.getCenter().getX(), de.getCenter().getY(), para.getCenter().getX(), para.getCenter().getY());
+    }
+
+    public void mover(List<MobileElement> mobileElements, String de, String para) {
+        sleep(500);
+        wait.until(ExpectedConditions.visibilityOfAllElements(mobileElements.get(0)));
+        mover(mobileElements.stream()
+                        .filter(m -> m.getText().equalsIgnoreCase(de))
+                        .findFirst().orElseThrow(IllegalArgumentException::new),
+                mobileElements.stream()
+                        .filter(m -> m.getText().equalsIgnoreCase(para))
+                        .findFirst().orElseThrow(IllegalArgumentException::new));
     }
 
     protected void sleep(int time) {

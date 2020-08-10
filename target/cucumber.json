@@ -3,15 +3,15 @@
     "line": 5,
     "elements": [
       {
-        "start_timestamp": "2020-07-05T00:08:08.430Z",
-        "line": 52,
-        "name": "Resetar todoas as opções",
+        "start_timestamp": "2020-07-07T01:30:01.088Z",
+        "line": 14,
+        "name": "Arrastar o drag and drop",
         "description": "",
-        "id": "swipe;resetar-todoas-as-opções",
+        "id": "drag-and-drop;arrastar-o-drag-and-drop;;2",
         "after": [
           {
             "result": {
-              "duration": 3416021000,
+              "duration": 3993274000,
               "status": "passed"
             },
             "match": {
@@ -20,19 +20,19 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Cenario",
+        "keyword": "Esquema do Cenario",
         "steps": [
           {
             "result": {
-              "duration": 14877347000,
+              "duration": 17793495000,
               "status": "passed"
             },
-            "line": 53,
-            "name": "escolher no menu a opção \"Swipe List\"",
+            "line": 8,
+            "name": "escolher no menu a opção \"Drag and drop\"",
             "match": {
               "arguments": [
                 {
-                  "val": "Swipe List",
+                  "val": "Drag and drop",
                   "offset": 26
                 }
               ],
@@ -42,50 +42,135 @@
           },
           {
             "result": {
-              "duration": 22592880000,
+              "duration": 3160805000,
               "status": "passed"
             },
-            "line": 54,
-            "name": "resetar todos os swipes da swipe list",
+            "line": 9,
+            "name": "arrastar a opção \"Esta\" para \"Faça um clique longo,\"",
             "match": {
-              "location": "br.com.cursoudemy.appium.steps.SwipeSteps.resetarTodosOsSwipesDaSwipeList()"
+              "arguments": [
+                {
+                  "val": "\"Esta\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Faça um clique longo,\"",
+                  "offset": 29
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.DragAndDropSteps.arrastarAOpcaoPara(java.lang.String,java.lang.String)"
             },
             "keyword": "Quando "
           },
           {
             "result": {
-              "duration": 759209000,
-              "status": "passed"
+              "error_message": "arrays first differed at element [0]; expected:\u003c[é uma li]sta\u003e but was:\u003c[E]sta\u003e\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:534)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:285)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:300)\n\tat br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela(DragAndDropSteps.java:51)\n\tat ✽.validar as posições na tela(file:///Users/rodrigoprates/Desktop/Projetos/AutomacaoMobile/src/test/resources/features/DragAndDrop.feature:10)\nCaused by: org.junit.ComparisonFailure: expected:\u003c[é uma li]sta\u003e but was:\u003c[E]sta\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:534)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:285)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:300)\n\tat br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela(DragAndDropSteps.java:51)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\n",
+              "duration": 405531000,
+              "status": "failed"
             },
-            "line": 55,
-            "name": "visialisar que não tem mais nenhum marcado",
+            "line": 10,
+            "name": "validar as posições na tela",
             "match": {
-              "location": "br.com.cursoudemy.appium.steps.SwipeSteps.visialisarQueNaoTemMaisNenhumMarcado()"
+              "location": "br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela()"
             },
             "keyword": "Entao "
           }
         ],
         "tags": [
           {
-            "name": "@swipe"
+            "name": "@DragAndDrop"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-07T01:30:26.871Z",
+        "line": 15,
+        "name": "Arrastar o drag and drop",
+        "description": "",
+        "id": "drag-and-drop;arrastar-o-drag-and-drop;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 4078525000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "br.com.cursoudemy.appium.core.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Esquema do Cenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5911317000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "escolher no menu a opção \"Drag and drop\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Drag and drop",
+                  "offset": 26
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.FormularioSteps.escolherNoMenuAOpcao(java.lang.String)"
+            },
+            "keyword": "Dado "
           },
           {
-            "name": "@swipeListPage"
+            "result": {
+              "duration": 3122392000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "arrastar a opção \"Faça um clique longo,\" para \"Esta\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Faça um clique longo,\"",
+                  "offset": 17
+                },
+                {
+                  "val": "\"Esta\"",
+                  "offset": 46
+                }
+              ],
+              "location": "br.com.cursoudemy.appium.steps.DragAndDropSteps.arrastarAOpcaoPara(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Quando "
           },
           {
-            "name": "@resetarSwipeList"
+            "result": {
+              "error_message": "arrays first differed at element [0]; expected:\u003c[Faça um clique longo,]\u003e but was:\u003c[Esta]\u003e\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:534)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:285)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:300)\n\tat br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela(DragAndDropSteps.java:51)\n\tat ✽.validar as posições na tela(file:///Users/rodrigoprates/Desktop/Projetos/AutomacaoMobile/src/test/resources/features/DragAndDrop.feature:10)\nCaused by: org.junit.ComparisonFailure: expected:\u003c[Faça um clique longo,]\u003e but was:\u003c[Esta]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)\n\tat org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)\n\tat org.junit.Assert.internalArrayEquals(Assert.java:534)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:285)\n\tat org.junit.Assert.assertArrayEquals(Assert.java:300)\n\tat br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela(DragAndDropSteps.java:51)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:564)\n\tat io.cucumber.java.Invoker.invoke(Invoker.java:27)\n\tat io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)\n\tat io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)\n\tat io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)\n\tat io.cucumber.core.runner.TestStep.run(TestStep.java:49)\n\tat io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)\n\tat io.cucumber.core.runner.TestCase.run(TestCase.java:51)\n\tat io.cucumber.core.runner.Runner.runPickle(Runner.java:66)\n\tat io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:149)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)\n\tat io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:185)\n\tat io.cucumber.junit.Cucumber.runChild(Cucumber.java:83)\n\tat org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)\n\tat org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)\n\tat io.cucumber.junit.Cucumber$RunCucumber.evaluate(Cucumber.java:219)\n\tat org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)\n\tat org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)\n\tat org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:413)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:230)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:58)\n",
+              "duration": 369881000,
+              "status": "failed"
+            },
+            "line": 10,
+            "name": "validar as posições na tela",
+            "match": {
+              "location": "br.com.cursoudemy.appium.steps.DragAndDropSteps.validarAsPosicoesNaTela()"
+            },
+            "keyword": "Entao "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DragAndDrop"
           }
         ]
       }
     ],
-    "name": "Swipe",
+    "name": "Drag And Drop",
     "description": "",
-    "id": "swipe",
+    "id": "drag-and-drop",
     "keyword": "Funcionalidade",
-    "uri": "file:src/test/resources/features/Swipe.feature",
+    "uri": "file:src/test/resources/features/DragAndDrop.feature",
     "tags": [
       {
-        "name": "@swipe",
+        "name": "@DragAndDrop",
         "type": "Tag",
         "location": {
           "line": 4,

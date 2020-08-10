@@ -17,8 +17,6 @@ public class Exerc4 {
         reajuste = transformaEmNumeroInteiro(scan.nextLine());
         novoSalario = calculaReajusteDeSalario(salarioAtual, reajuste);
         System.out.println(nf.format(novoSalario));
-        int[] a = new int[4];
-        System.out.println(a[-9]);
 
     }
 
